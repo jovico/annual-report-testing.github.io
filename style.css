@@ -89,6 +89,7 @@ a:link {
 .topbar-navigation {
   width: 100%;
   /* background-color: #681215; */
+  display: flex;
   position: fixed;
   z-index: 1000;
   box-shadow: 0px 10px 40px #28070766;
@@ -108,10 +109,19 @@ a:link {
 .annual-report-box {
   background-color: #cc242a;
   color: #f7f7f8;
-  text-align: center;
-  padding: 13px;
+  display: flex;
+  /* justify-items: center; */
+  align-items: center;
+  /* text-align: center; */
+
+  /* padding: 13px; */
+  height: 100%;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+}
+
+.annual-report-box span {
+  margin: 0 auto;
 }
 
 /*-------------------------------------------------
@@ -152,6 +162,16 @@ a:link {
   justify-content: space-around;
 } */
 
+.menu-bar-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-bar-nav ul {
+  /* flex-basis: max-content; */
+  display: flex;
+}
+
 nav.menu-bar-nav li a {
   text-decoration: none;
   color: #f7f7f8;
@@ -164,9 +184,10 @@ nav.menu-bar-nav li:hover {
 nav.menu-bar-nav li {
   list-style-type: none;
   display: inline-block;
-  padding: 10px 20px;
+  flex-basis: max-content;
+  padding: 15px 20px;
   position: relative;
-  align-self: stretch;
+  /* align-self: stretch; */
 
   /* font-weight: 500; */
 }
@@ -178,7 +199,7 @@ nav.menu-bar-nav ul li ul {
 nav.menu-bar-nav ul li:hover ul {
   display: block;
   position: absolute;
-  top: 54px;
+  top: 60px;
   width: 200px;
   background-color: #681215;
   color: #f7f7f8;
@@ -438,11 +459,34 @@ nav.menu-bar-nav ul li ul li {
   border-radius: 50px;
 }
 
+.inner-container-mobile {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 80px auto;
+  gap: 20px;
+  padding: 40px;
+  background-color: #f7f7f8;
+  border-radius: 50px;
+}
+
 .deg90-corners {
   border-radius: 50px 50px 0 0;
 }
 
 .aside-img-container {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  display: flex;
+}
+
+.aside-img-container-highschool-nica {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  display: flex;
+}
+
+.aside-img-container-univ-nica {
   grid-column-start: 4;
   grid-column-end: 6;
   display: flex;
@@ -457,6 +501,7 @@ nav.menu-bar-nav ul li ul li {
   width: 150px;
   margin-left: 10px;
   margin-top: 20px;
+  flex-basis: auto;
 }
 
 .aside-img-column-02 {
@@ -605,6 +650,49 @@ nav.menu-bar-nav ul li ul li {
   width: 50px;
   background: linear-gradient(to right, #00a0d6 50%, #a31c21 50%);
   margin-left: 20px;
+}
+
+.bar-57-oax {
+  height: 160px;
+  width: 50px;
+  background: linear-gradient(to right, #f9d005 50%, #a31c21 50%);
+  margin-left: 20px;
+}
+
+.bar-10-oax {
+  height: 37px;
+  width: 50px;
+  background: linear-gradient(to right, #f9d005 50%, #a31c21 50%);
+  margin-left: 20px;
+}
+
+.bar-19-oax {
+  height: 70px;
+  width: 50px;
+  background: linear-gradient(to right, #f9d005 50%, #a31c21 50%);
+  margin-left: 20px;
+}
+
+.bar-14-oax {
+  height: 50px;
+  width: 50px;
+  background: linear-gradient(to right, #f9d005 50%, #a31c21 50%);
+  margin-left: 20px;
+}
+
+/* ----- ////// IMPACT MEXICO ///// ------ */
+
+.aside-img-container-mex-logo {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  display: flex;
+  flex-direction: column;
+}
+
+.aside-img-container-mex-logo > img {
+  width: 280px;
+  height: min-content;
+  margin-bottom: 20px;
 }
 
 /*-- ----------[ START ] GRID CONTAINER FINANCIALS --*/
@@ -1802,7 +1890,7 @@ div.graphic-bar-mexico
   color: #681215;
   transform: rotate(-45deg);
   align-self: center;
-  justify-self: center;
+  justify-self: flex-end;
 }
 
 .graphic-bar-year {
@@ -2237,6 +2325,136 @@ div.index-mobile > img {
   display: none;
 }
 
+/* --- /////  MEXICO IMPACT MDT TOLC ETC //// --- */
+
+.span-04 {
+  grid-column: span 4;
+}
+
+.img-container-mex-impact {
+  grid-column-start: 5;
+}
+
+.img-container-mex-impact > img {
+  width: 350px;
+  height: min-content;
+}
+
+.mio-logo > img {
+  height: 150px;
+  width: min-content;
+  margin-top: -10px;
+}
+
+.aside-image-container-mio {
+  grid-column-start: 4;
+  grid-column-end: 6;
+}
+
+.aside-image-container-mio02 {
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+
+div.aside-image-container-mio > img {
+  width: 420px;
+  height: min-content;
+}
+
+div.aside-image-container-mio02 > img {
+  width: 420px;
+  height: min-content;
+}
+
+.tolc-group > img {
+  width: 450px;
+}
+
+.tolc-flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tolc-statement {
+  color: #f7f7f8;
+  font-style: italic;
+  font-weight: 400;
+  padding: 20px;
+}
+
+div.tolc-statement:nth-of-type(1) {
+  background-color: #cc242a;
+}
+
+div.tolc-statement:nth-of-type(2) {
+  background-color: #f9d005;
+}
+
+.pack-for-purpose {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f8;
+}
+
+.pack-purpose-bar {
+  /* display: block; */
+  width: 100%;
+  background-color: #681215;
+  color: #f7f7f8;
+  padding: 20px;
+}
+
+.pack-purpose-flex-row {
+  display: flex;
+}
+
+.purpose-text {
+  width: 50%;
+  padding: 20px;
+  color: #484848;
+  background-color: #f7f7f8;
+}
+
+.pack-logos {
+  display: flex;
+  align-items: center;
+}
+
+.pack-logos > img {
+  width: 40%;
+  height: min-content;
+}
+
+.pack-purpose-link > a > p {
+  font-size: 16px;
+}
+
+.pack-logos > img:nth-child(1) {
+  padding-right: 20px;
+  border-right: 2px solid #681215;
+}
+
+.pack-logos > img:nth-child(2) {
+  padding-left: 20px;
+  padding-left: 20px;
+}
+
+.pack-purpose-link a,
+.pack-purpose-link a:hover,
+.pack-purpose-link a:active,
+.pack-purpose-link a:visited {
+  color: #484848;
+}
+
+.purpose-img {
+  width: 50%;
+  align-self: center;
+}
+
+.purpose-img > img {
+  width: 100%;
+}
+
 /*------------- // LINKS //-------------------*/
 
 .external-link:link {
@@ -2307,7 +2525,8 @@ sCREEN RESOLUTIONS
   }
 
   .container {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     border-bottom: none;
     padding-bottom: 40px;
     padding: 0;
@@ -3162,6 +3381,99 @@ sCREEN RESOLUTIONS
     width: 100%;
     margin-bottom: 20px;
   }
+
+  /* --- //// IMPACT NICA //// --- */
+
+  .container-flex-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inner-container-mobile {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .inner-container-flexbox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bottom-container-bkg {
+    padding: 20px;
+  }
+
+  .bottom-container-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bottom-container-column:nth-of-type(2) {
+    margin-top: 40px;
+  }
+
+  .right-align-box {
+    margin-bottom: 40px;
+  }
+
+  .item-title-order--1 {
+    order: -1;
+  }
+
+  .item-p-order-2 {
+    order: 2;
+  }
+
+  .aside-img-container-highschool-nica {
+    order: 1;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .aside-img-column-01,
+  .aside-img-column-02 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .aside-img-column-01 > img,
+  .aside-img-column-02 > img {
+    width: 100%;
+    margin-left: 0;
+    height: min-content;
+  }
+
+  .aside-img-container-univ-nica {
+    grid-column-start: 1;
+    order: 1;
+  }
+
+  /* --- //// IMPACT MEXICO //// --- */
+
+  .aside-img-container-mex-logo {
+    grid-column-start: 1;
+  }
+
+  .img-container-mex-impact > img {
+    width: 100%;
+    height: min-content;
+  }
+
+  .aside-img-container-mex-logo > img {
+    width: 100%;
+  }
+
+  div.aside-image-container-mio > img {
+    width: 100%;
+    height: min-content;
+  }
+
+  div.aside-image-container-mio02 > img {
+    width: 100%;
+    height: min-content;
+  }
 }
 /*-----------------------------------------------------------
 --------- iPAD and TABLET // 481px X 1200px bar//------------
@@ -3796,5 +4108,15 @@ sCREEN RESOLUTIONS
 
   .span-two-columns-first {
     grid-column: 1 / span 2;
+  }
+
+  .image-span-full-desktop {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  .image-span-full-desktop > img {
+    /* width: 420px; */
   }
 }
