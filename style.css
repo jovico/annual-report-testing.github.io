@@ -88,7 +88,8 @@ a:link {
 
 .topbar-navigation {
   width: 100%;
-  /* background-color: #681215; */
+  max-height: min-content;
+  background-color: #681215;
   display: flex;
   position: fixed;
   z-index: 1000;
@@ -112,7 +113,7 @@ a:link {
   display: flex;
   /* justify-items: center; */
   align-items: center;
-  /* text-align: center; */
+  text-align: center;
 
   /* padding: 13px; */
   height: 100%;
@@ -141,6 +142,11 @@ a:link {
   height: 3px;
   background-color: #686867;
 }
+
+.burger-nav-links {
+  display: none;
+}
+
 /*-------------------------------------------------
 ----------------- MENU bar ------------------
 --------------------------------------------------*/
@@ -2455,6 +2461,74 @@ div.tolc-statement:nth-of-type(2) {
   width: 100%;
 }
 
+.nav-links {
+  display: none;
+}
+/* --- //// THE THEORY OF CHANGE //// --- */
+
+.wrapper-theory-change {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #f7f7f8;
+}
+
+.container-theory-change {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(16, 0.5fr);
+}
+
+.container-theory-change > div {
+  padding: 20px;
+}
+
+.container-theory-change > div > p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: #681215;
+}
+
+.container-theory-change > div:nth-child(1) {
+  background-color: #d7565659;
+  display: grid;
+  grid-row-start: 1;
+  grid-row-end: 16;
+}
+
+.container-theory-change > div:nth-child(1) > p:nth-of-type(1) {
+  grid-row-start: 8;
+  grid-row-end: 14;
+  border-bottom: 2px solid #681215;
+}
+
+.container-theory-change > div:nth-child(1) > p:nth-of-type(2) {
+  grid-row-start: 14;
+  grid-row-end: 16;
+}
+
+.container-theory-change > div:nth-child(2) {
+  background-color: #f9d00559;
+}
+
+.container-theory-change > div:nth-child(3) {
+  background-color: #f9d00533;
+}
+
+.container-theory-change > div:nth-child(4) {
+  background-color: #acc92e59;
+}
+
+.theory-heading {
+  color: #681215;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
 /*------------- // LINKS //-------------------*/
 
 .external-link:link {
@@ -3474,6 +3548,103 @@ sCREEN RESOLUTIONS
     width: 100%;
     height: min-content;
   }
+
+  /* --- //// BURGER NAVIGATION MOBILE  //// --- */
+
+  .logo-placement {
+    position: relative;
+  }
+
+  .burger-navigation-mobile-x {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #cc242a;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .burger-navigation-mobile-x div {
+    width: 120%;
+    height: 3px;
+    background-color: #686867;
+    /* align-self: center;
+    justify-self: center; */
+  }
+
+  .burger-navigation-mobile-x div:nth-child(1) {
+    transform: rotate(45deg) translate(2px, 2px);
+  }
+
+  .burger-navigation-mobile-x div:nth-child(2) {
+    transform: rotate(-45deg);
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #681215f2;
+    color: #f7f7f8;
+    position: absolute;
+    top: 40px;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 100px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .nav-links li,
+  .nav-links ul li {
+    list-style-type: none;
+    padding: 10px 20px;
+  }
+
+  .nav-links ul a li {
+    width: fit-content;
+  }
+
+  .section-item-burgermenu {
+    border-bottom: 2px solid #cc242a;
+  }
+
+  .burgermenu-main-link {
+    background-color: #cc242a;
+    padding: 5px 10px;
+  }
+
+  .nav-links li a,
+  .nav-links li a:active,
+  .nav-links li a:hover,
+  .nav-links li a:visited {
+    color: #f7f7f8;
+  }
+
+  .nav-links li ul a li {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-color: #cc242a;
+    line-height: 1.8rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+    opacity: 1;
+  }
+
+  .burger-navigation-mobile-x.active {
+    display: flex;
+  }
+
+  .burger-navigation-mobile.active {
+    display: none;
+  }
 }
 /*-----------------------------------------------------------
 --------- iPAD and TABLET // 481px X 1200px bar//------------
@@ -3568,7 +3739,19 @@ sCREEN RESOLUTIONS
     align-items: flex-start;
   }
 
-  /*------ HOSPITALITY / YEAR IN BRIEF ---*/
+  .nav-links.active {
+    display: none;
+  }
+
+  .burger-navigation-mobile-x.active {
+    display: none;
+  }
+
+  .burger-navigation-mobile.active {
+    display: none;
+
+    /*------ HOSPITALITY / YEAR IN BRIEF ---*/
+  }
 }
 
 /*-----------------------------------------------------------
@@ -3733,8 +3916,19 @@ sCREEN RESOLUTIONS
     padding: 20px;
     /* gap: 10px; */
   }
-}
 
+  .nav-links.active {
+    display: none;
+  }
+
+  .burger-navigation-mobile-x.active {
+    display: none;
+  }
+
+  .burger-navigation-mobile.active {
+    display: none;
+  }
+}
 /*-----------------------------------------------------------
 --------- MOBILE LANDSCAPE 02 IPAD MINI TABLET INTERMEDIATE // 768px to 840px-----------------------
 -------------------------------------------------------------*/
@@ -3983,6 +4177,18 @@ sCREEN RESOLUTIONS
   .intro-yellow-box {
     top: 0;
   }
+
+  .nav-links.active {
+    display: none;
+  }
+
+  .burger-navigation-mobile-x.active {
+    display: none;
+  }
+
+  .burger-navigation-mobile.active {
+    display: none;
+  }
 }
 /*-----------------------------------------------------------
 --------- LAPTOP Up // 1201px and more-----------------------
@@ -4118,5 +4324,17 @@ sCREEN RESOLUTIONS
 
   .image-span-full-desktop > img {
     /* width: 420px; */
+  }
+
+  .nav-links.active {
+    display: none;
+  }
+
+  .burger-navigation-mobile-x.active {
+    display: none;
+  }
+
+  .burger-navigation-mobile.active {
+    display: none;
   }
 }

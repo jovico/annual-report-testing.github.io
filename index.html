@@ -33,11 +33,49 @@
             src="./assets/img/logo-hcc-long.png"
             alt="Hotel con Corazon logo"
           />
-          <div class="burger-navigation-mobile">
+          <div class="burger-navigation-mobile" id="burger-menu">
             <div class="burger-icon-line"></div>
             <div class="burger-icon-line"></div>
             <div class="burger-icon-line"></div>
           </div>
+          <div class="burger-navigation-mobile-x" id="burger-menu-x">
+            <div class="burger-icon-line-x"></div>
+            <div class="burger-icon-line-x"></div>
+          </div>
+          <ul class="nav-links" id="nav-links">
+            <li class="section-item-burgermenu">
+              <span class="burgermenu-main-link">Impact</span>
+              <ul>
+                <a href="#nica-impact"><li>Education activities</li></a>
+                <a href="#student-stories-nica"><li>Student stories</li></a>
+                <a href="#theory-of-change"><li>Theory of change</li></a>
+                <a href="#edu-in-numbers"><li>Education in #</li></a>
+              </ul>
+            </li>
+            <li class="section-item-burgermenu">
+              <span class="burgermenu-main-link">Hospitality</span>
+              <ul>
+                <a href="#year-in-brief"><li>The year in brief</li></a>
+                <a href="#hospitality-in-numbers"><li>Hospitality in #</li></a>
+                <a href="#a-day-with"><li>A day with...</li></a>
+              </ul>
+            </li>
+            <li class="section-item-burgermenu">
+              <span class="burgermenu-main-link">Financials</span>
+              <ul>
+                <a href="#financials-nica"><li>Nicaragua</li></a>
+                <a href="#financials-mexico"><li>Mexico</li></a>
+              </ul>
+            </li>
+            <li class="section-item-burgermenu">
+              <a href="#outlook"
+                ><span class="burgermenu-main-link">24 Outlook</span></a
+              >
+            </li>
+            <li class="section-item-burgermenu">
+              <a href="#"><span class="burgermenu-main-link">PDF</span></a>
+            </li>
+          </ul>
         </div>
         <div class="annual-report-box"><span>Annual Report 2023</span></div>
       </div>
@@ -1524,7 +1562,43 @@
       <!-- /////////////////////////////////////////////////////////////////////-->
       <!-- /////////////////////////////////////////////////////////////////////-->
       <!--////////////// [ START ]This is the SECTION THEORY OF CHANGE ///////-->
-      <section id="theory-of-change" class="section"></section>
+      <section id="theory-of-change" class="section transparent">
+        <div class="flex-container-std-stories">
+          <div class="impact-nica-title section-title white-color border-left">
+            <div>
+              <h2 class="uppercase">
+                Impact
+                <!--<span class="visible">|</span>-->
+              </h2>
+            </div>
+            <div>
+              <h2 class="uppercase">
+                The Theory of change
+                <!--<span class="visible">|</span>-->
+              </h2>
+            </div>
+            <div><h2 class="uppercase">Nicaragua</h2></div>
+          </div>
+        </div>
+        <div class="wrapper-theory-change">
+          <div class="container-theory-change">
+            <div>
+              <h4 class="theory-heading">Activity</h4>
+              <p>Scholarship<br />program</p>
+              <p>Total</p>
+            </div>
+            <div>
+              <h4 class="theory-heading">Who</h4>
+            </div>
+            <div>
+              <h4 class="theory-heading"># Beneficiaries</h4>
+            </div>
+            <div>
+              <h4 class="theory-heading">Result / Output</h4>
+            </div>
+          </div>
+        </div>
+      </section>
       <!--/////////////// [ END ]This is the SECTION THEORY OF CHANGE ///////-->
       <!-- /////////////////////////////////////////////////////////////////////-->
       <!-- /////////////////////////////////////////////////////////////////////-->
@@ -3087,5 +3161,6 @@
       <!-- /////////////////////////////////////////////////////////////////////-->
     </div>
     <!-- [ END ]This is the WRAPPER  container -->
+    <script src="script.js"></script>
   </body>
 </html>
