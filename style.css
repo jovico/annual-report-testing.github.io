@@ -1368,6 +1368,7 @@ div.edu-numbers-column-title > div:nth-child(1) {
   /*vertical-align: middle; */
   display: flex;
   justify-content: center;
+  color: #f7f7f8;
 }
 
 .edu-numbers-row-title {
