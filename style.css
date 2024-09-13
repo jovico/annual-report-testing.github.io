@@ -13,7 +13,7 @@
 }
 
 body {
-  background: linear-gradient(to left top, #a31c21, #3d0a0c);
+  background: linear-gradient(to left top, #f0efef, #e7e7e7);
   background-attachment: fixed;
   color: #484848;
   font-family: "Fira Sans", sans-serif;
@@ -105,6 +105,7 @@ a:link {
 .logo-placement img {
   height: 42px;
   align-self: center;
+  margin: 0 auto;
 }
 
 .annual-report-box {
@@ -183,7 +184,11 @@ nav.menu-bar-nav li a {
   color: #f7f7f8;
 }
 
-nav.menu-bar-nav li:hover {
+nav.menu-bar-nav ul li:hover {
+  background-color: #cc242a;
+}
+
+nav.menu-bar-nav ul li.active {
   background-color: #cc242a;
 }
 
@@ -279,7 +284,7 @@ nav.menu-bar-nav ul li ul li {
 }
 
 .border-left {
-  border-left: 5px solid #f7f7f8;
+  border-left: 5px solid #681215;
 }
 
 .border-left.impact-title-show {
@@ -287,12 +292,12 @@ nav.menu-bar-nav ul li ul li {
 }
 
 /* #intro-text-nica {
-  /* display: flex;
+  display: flex;
   flex-direction: row; 
   max-width: 700px;
   padding: 40px;
   background-color: #f7f7f8;
-} */
+}  */
 
 .article-box-white {
   max-width: 700px;
@@ -300,7 +305,8 @@ nav.menu-bar-nav ul li ul li {
   background-color: #f7f7f8;
   position: relative;
   top: -40px;
-  box-shadow: 25px 25px 140px 30px #3d0a0ccc;
+  box-shadow: 5px 5px 120px 5px #3d0a0ccc;
+  margin: 0 auto;
 }
 
 /*-------------------------------------------------
@@ -318,6 +324,10 @@ nav.menu-bar-nav ul li ul li {
 
 /*----- COVER HEADER CLASSES -------------*/
 
+#cover-index {
+  margin-bottom: 0;
+}
+
 .cover-container {
   width: 100%;
   max-width: 980px;
@@ -330,29 +340,38 @@ nav.menu-bar-nav ul li ul li {
 }
 
 .main-heading {
-  position: absolute;
+  /* position: absolute;
   top: 80px;
-  left: 40px;
+  left: 40px; */
+  padding: 20px;
+  background-color: #681215;
+  text-align: center;
 }
 
 .main-heading > h1 {
-  font-size: 72px;
+  font-size: 54px;
   font-family: "PT sans", sans-serif;
   /* text-transform: uppercase; */
+  text-transform: uppercase;
+
   font-weight: 800;
   line-height: 1.2;
-  color: #cc242a;
+  color: #f7f7f8;
   display: inline;
 
-  background-color: #f7f7f8cc;
-  text-shadow: 1px 1px #3d0a0ccc;
-  box-shadow: -5px 15px 25px 2px #3d0a0c33;
+  /* background-color: #f7f7f8cc; */
+  /* text-shadow: 1px 1px #3d0a0ccc;
+  box-shadow: -5px 15px 25px 2px #3d0a0c33; */
   /* box-shadow: 5px 5px #3d0a0c; */
 }
 
 .text-bar-to-front {
   z-index: 3;
 }
+
+/* .text-bar-to-front:nth-of-type(2) {
+  margin-left: 280px;
+} */
 
 /*-------------------------------------------------
 ---------------------------------------------------
@@ -371,7 +390,7 @@ nav.menu-bar-nav ul li ul li {
 .section {
   width: 100%;
   padding: 20px;
-  padding-top: 80px;
+  /* padding-top: 80px; */
   background-color: #f7f7f8;
 }
 
@@ -427,7 +446,7 @@ nav.menu-bar-nav ul li ul li {
   border-radius: 50px;
   background-color: #f7f7f8;
   /* margin-bottom: 40px; */
-  box-shadow: 10px 18px 35px 8px #3d0a0c99;
+  /* box-shadow: 10px 18px 35px 8px #3d0a0c99; */
   /* z-index: 1000; */
   /* margin-top: 40px; */
 }
@@ -820,6 +839,11 @@ nav.menu-bar-nav ul li ul li {
   height: 10px;
   position: relative;
   z-index: 1;
+  margin: 0 auto;
+}
+
+#intro-nica-bar {
+  top: -40px;
 }
 
 .border-color-bottom-yellow {
@@ -835,6 +859,12 @@ nav.menu-bar-nav ul li ul li {
   height: 10px;
   position: relative;
   z-index: 1;
+  margin: 0 auto;
+}
+
+#intro-mex-bar {
+  top: -40px;
+  margin-bottom: 80px;
 }
 
 /*------------- // TEXT EDITING //---------------*/
@@ -880,6 +910,7 @@ span.article-title-less {
 .uppercase {
   text-transform: uppercase;
   padding: 0 10px 0 10px;
+  color: #681215;
 }
 
 .article-title-font {
@@ -2108,12 +2139,25 @@ p.review-text {
   grid-column-end: 6;
 }
 
+.aside-img-container-outloook {
+  width: 100%;
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 4;
+}
+
 .aside-img-container-outlook > img {
   width: 100%;
 }
 
 .inner-container-outlook {
   grid-template-rows: 80px repeat(4, 250px);
+}
+
+#outlook-mexico {
+  position: relative;
+  top: -130px;
 }
 
 div.aside-img-container-outlook:nth-of-type(4) {
@@ -2358,8 +2402,10 @@ div.index-mobile > img {
 }
 
 .aside-image-container-mio02 {
-  grid-column-start: 2;
-  grid-column-end: 5;
+  display: grid;
+  grid-column-start: 1;
+  /* grid-column-end: 5; */
+  grid-row-start: 7;
 }
 
 div.aside-image-container-mio > img {
@@ -2368,7 +2414,7 @@ div.aside-image-container-mio > img {
 }
 
 div.aside-image-container-mio02 > img {
-  width: 420px;
+  width: 320px;
   height: min-content;
 }
 
@@ -2400,6 +2446,14 @@ div.tolc-statement:nth-of-type(2) {
   display: flex;
   flex-direction: column;
   background-color: #f7f7f8;
+}
+
+h3#exam-prep-title {
+  display: grid;
+}
+
+h3#summer-school-title {
+  grid-column-start: ;
 }
 
 .pack-purpose-bar {
@@ -2470,63 +2524,79 @@ div.tolc-statement:nth-of-type(2) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;
+  padding: 0;
   background-color: #f7f7f8;
 }
 
-.container-theory-change {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(16, 0.5fr);
+.wrapper-theory-change > img {
+  width: 100%;
+  cursor: pointer;
 }
 
-.container-theory-change > div {
-  padding: 20px;
+/* --- //// THE THEORY OF CHANGE POPUP WINDOW //// --- */
+
+#imagePopup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 60px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #3d0a0ce6;
 }
 
-.container-theory-change > div > p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1;
-  color: #681215;
+#imagePopup img {
+  margin: auto;
+  margin-bottom: 80px;
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  height: fit-content;
 }
 
-.container-theory-change > div:nth-child(1) {
-  background-color: #d7565659;
-  display: grid;
-  grid-row-start: 1;
-  grid-row-end: 16;
-}
-
-.container-theory-change > div:nth-child(1) > p:nth-of-type(1) {
-  grid-row-start: 8;
-  grid-row-end: 14;
-  border-bottom: 2px solid #681215;
-}
-
-.container-theory-change > div:nth-child(1) > p:nth-of-type(2) {
-  grid-row-start: 14;
-  grid-row-end: 16;
-}
-
-.container-theory-change > div:nth-child(2) {
-  background-color: #f9d00559;
-}
-
-.container-theory-change > div:nth-child(3) {
-  background-color: #f9d00533;
-}
-
-.container-theory-change > div:nth-child(4) {
-  background-color: #acc92e59;
-}
-
-.theory-heading {
-  color: #681215;
-  text-decoration: underline;
-  text-underline-offset: 8px;
-  font-size: 14px;
+#imagePopup span {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #f7f7f8;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
   text-align: center;
+  line-height: 0.6;
+  padding: 4px;
+  cursor: pointer;
+  color: #f7f7f8;
+  /* width: 40px;
+  height: 40px; */
+  border-radius: 50%;
+  border: 2px solid #f7f7f8;
+}
+
+#imagePopup .description-bar {
+  width: 100%;
+  background-color: #681215;
+  color: #f7f7f8;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 15px 0;
+  font-size: 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#imagePopup .description-bar span.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #f7f7f8;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 /*------------- // LINKS //-------------------*/
@@ -2549,6 +2619,99 @@ div.tolc-statement:nth-of-type(2) {
 .external-link:active {
   color: #686867;
   text-decoration: none;
+}
+
+/* ---- LAST ONES BOTTOM CSS ----*/
+/* ---- OUTLOOK ---- */
+
+.outlook-mexico-paragraph {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+}
+
+.outlook-mexico-paragraph > p {
+  margin-bottom: 10px;
+}
+
+.aside-img-container-outlook02 {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 6;
+}
+
+.aside-img-container-outlook02 > img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#outlook {
+  margin-bottom: 0;
+}
+
+.edit-container-outlook {
+  padding-bottom: 0;
+  border-radius: 50px 50px 0 0;
+}
+
+/* --- COLOPHON --- */
+#colophon {
+  margin-bottom: 0;
+}
+#colophon-inner-container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  color: #f7f7f8;
+  font-size: 18px;
+  position: relative;
+}
+
+#colophon-text-boxes {
+  display: flex;
+  flex-direction: row;
+}
+
+#colophon-title {
+  font-size: 32px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+#colophon-intro {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+#colophon-credits ul li {
+  list-style-type: none;
+}
+
+#colophon-contacts-copyright {
+  margin-left: 100px;
+}
+
+#colophon-contacts-copyright ul li {
+  list-style-type: none;
+}
+
+#copyright {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+#back-to-top {
+  position: absolute;
+  bottom: 0;
+  right: 60px;
+}
+
+#back-to-top > a > img {
+  width: 120px;
 }
 
 /*-------------------------------------------------
@@ -3380,6 +3543,32 @@ sCREEN RESOLUTIONS
     grid-template-rows: 50px repeat(4, 250px);
   }
 
+  .aside-img-container-outlook02 {
+    order: 3;
+  }
+
+  .aside-img-container-outlook02 > img {
+    width: 100%;
+  }
+
+  #outlook-mexico {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    top: 0;
+  }
+
+  .outlook-mexico-paragraph {
+    order: 2;
+  }
+
+  .aside-img-container-outlook {
+    order: 1;
+  }
+  img#three-students-granada {
+    width: 100%;
+  }
+
   /* ----- /// INTRO WE'RE ON A ROLL /// ----- */
 
   .inner-container-intro {
@@ -3645,6 +3834,124 @@ sCREEN RESOLUTIONS
   .burger-navigation-mobile.active {
     display: none;
   }
+
+  /* --- ///// THE THEORY OF CHANGE --- /// */
+
+  .wrapper-theory-change {
+    padding: 0;
+  }
+
+  .wrapper-theory-change > img {
+    width: 100%;
+  }
+
+  /* --- ///// THE THEORY OF CHANGE POPUP --- /// */
+
+  #imagePopup {
+    top: 55px;
+  }
+
+  #imagePopup span {
+    padding: 3px;
+    border: 1px solid #f7f7f8;
+  }
+
+  #imagePopup .description-bar {
+    width: 100%;
+    background-color: #681215;
+    color: #f7f7f8;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 15px 0 15px 20px;
+    font-size: 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  #imagePopup .description-bar span.close-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #f7f7f8;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  #intro-mex-bar {
+    top: 0;
+    margin-bottom: 80px;
+  }
+
+  #intro-nica-bar {
+    top: 0;
+  }
+  /* ---- PACK FOR PURPOSE ---- */
+
+  .pack-for-purpose {
+    margin-top: 40px;
+  }
+  .pack-purpose-flex-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .purpose-text,
+  .purpose-img {
+    width: 100%;
+  }
+
+  /* --- COVER EDITING --- */
+
+  .main-heading {
+    padding: 10px;
+    background-color: #681215;
+    text-align: center;
+  }
+
+  .main-heading > h1 {
+    font-size: 26px;
+    font-family: "PT sans", sans-serif;
+    /* text-transform: uppercase; */
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #f7f7f8;
+    display: inline;
+    /* background-color: #f7f7f8cc; */
+    /* box-shadow: 5px 5px #3d0a0c; */
+  }
+
+  /* --- COLOPHON --- */
+
+  #colophon-inner-container {
+    padding: 20px;
+  }
+
+  #colophon-text-boxes {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contact {
+    margin-top: 20px;
+  }
+
+  #colophon-contacts-copyright {
+    margin-left: 0;
+  }
+
+  #back-to-top {
+    position: relative;
+    bottom: 0;
+    right: -220px;
+  }
+
+  #back-to-top > a > img {
+    width: 80px;
+  }
 }
 /*-----------------------------------------------------------
 --------- iPAD and TABLET // 481px X 1200px bar//------------
@@ -3751,6 +4058,47 @@ sCREEN RESOLUTIONS
     display: none;
 
     /*------ HOSPITALITY / YEAR IN BRIEF ---*/
+  }
+
+  /* ---  MEXICO IMPACT SECOND EDITING ---- */
+
+  .paragraph-grid-enlarge > p {
+    width: 400px;
+  }
+
+  .push-right > img {
+    position: relative;
+    right: -30px;
+  }
+
+  .paragraph-xxl > p {
+    width: 480px;
+  }
+
+  .paragraph-xxl-xl > p {
+    width: 580px;
+  }
+
+  #pilot-paragraph {
+    grid-row-start: 11;
+  }
+
+  .tolc-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .tolc-group > img {
+    width: 380px;
+  }
+
+  .tolc-flex-container {
+    grid-column-start: 1;
+  }
+
+  #back-to-top > a > img {
+    width: 80px;
   }
 }
 
@@ -3928,9 +4276,71 @@ sCREEN RESOLUTIONS
   .burger-navigation-mobile.active {
     display: none;
   }
+
+  /* --- /// IMPACT TEXT /// --- */
+
+  .span-03 {
+    grid-column: span 5;
+    padding-right: 20px;
+  }
+
+  .aside-img-column-01,
+  .aside-img-column-02 {
+    display: flex;
+    height: fit-content;
+  }
+
+  .aside-img-column-02 {
+    margin-top: 40px;
+  }
+
+  .aside-img-container-highschool-nica {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    display: flex;
+    flex-direction: column;
+    margin-left: -20px;
+  }
+
+  .aside-img-container-univ-nica {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    display: flex;
+    flex-direction: column;
+    margin-left: -20px;
+  }
+
+  .aside-img-container {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    display: flex;
+  }
+
+  .aside-img-container > img {
+    width: 80%;
+  }
+
+  #workshops-text {
+    grid-column: span 4;
+  }
+
+  #scholarships-staff-text {
+    grid-column: span 4;
+    /* margin-top: 20px; */
+  }
+
+  #schol-staff-title {
+    margin-top: 60px;
+  }
+
+  /* --- OUTLOOK 2024 --- */
+
+  .edit-mini-ipad {
+    grid-column-end: 4;
+  }
 }
 /*-----------------------------------------------------------
---------- MOBILE LANDSCAPE 02 IPAD MINI TABLET INTERMEDIATE // 768px to 840px-----------------------
+--------- MOBILE LANDSCAPE 02 IPAD MINI TABLET INTERMEDIATE // 768px to 844px-----------------------
 -------------------------------------------------------------*/
 
 /*---- YEAR IN BRIEF ------*/
@@ -4189,6 +4599,197 @@ sCREEN RESOLUTIONS
   .burger-navigation-mobile.active {
     display: none;
   }
+
+  /* --- /// IMPACT TEXT /// --- */
+
+  .span-03 {
+    grid-column: span 5;
+    padding-right: 20px;
+  }
+
+  .aside-img-column-01,
+  .aside-img-column-02 {
+    display: flex;
+    height: fit-content;
+  }
+
+  .aside-img-column-02 {
+    margin-top: 40px;
+  }
+
+  .aside-img-container-highschool-nica {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aside-img-container-mex-logo > img {
+    width: 220px;
+    height: min-content;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .aside-img-container-mex-logo {
+    grid-column-start: 2;
+  }
+
+  .text-align {
+    text-align: left;
+  }
+
+  /*--- MIO ---*/
+
+  .aside-image-container-mio02 {
+    display: grid;
+    grid-column-start: 1;
+    /* grid-column-end: 5; */
+    grid-row-start: 8;
+  }
+
+  div.aside-image-container-mio02 > img {
+    width: 280px;
+  }
+
+  div.aside-image-container-mio > img {
+    width: 320px;
+    height: min-content;
+  }
+
+  .aside-image-container-mio {
+    grid-column-start: 2;
+    grid-column-end: 5;
+  }
+
+  .mio-logo > img {
+    height: 120px;
+    width: min-content;
+    margin-top: -10px;
+  }
+
+  #mio-logo-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* ---  MEXICO IMPACT SECOND EDITING ---- */
+
+  .paragraph-grid-enlarge > p {
+    width: 400px;
+  }
+
+  .push-right > img {
+    position: relative;
+    right: 10px;
+  }
+
+  .paragraph-xxl > p {
+    width: 480px;
+  }
+
+  .paragraph-xxl-xl > p {
+    width: 580px;
+  }
+
+  #pilot-paragraph {
+    grid-row-start: 11;
+  }
+
+  .tolc-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column-start: 1;
+  }
+
+  .tolc-group > img {
+    width: 480px;
+  }
+
+  .tolc-flex-container {
+    grid-column-start: 1;
+  }
+
+  #scholarships-img-none {
+    display: none;
+  }
+
+  #intercultural-english-img {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 5;
+  }
+
+  #intercultural-english-img > img {
+    width: 550px;
+  }
+
+  .paragraph-ipad-mini > p {
+    width: 480px;
+  }
+
+  #pilot-paragraph {
+    grid-row-start: 13;
+  }
+
+  #pilot-paragraph > p {
+    width: 480px;
+  }
+
+  /* --- OUTLOOK 2024 --- */
+
+  .edit-mini-ipad {
+    grid-column-end: 4;
+  }
+
+  #outlook-nicaragua {
+    position: relative;
+    top: -120px;
+  }
+
+  .aside-img-container-outloook {
+    width: 100%;
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    position: relative;
+    top: -140px;
+    left: -40px;
+  }
+
+  .aside-img-container-outloook > img {
+    width: 100%;
+  }
+
+  div.aside-img-container-outlook:nth-of-type(4) {
+    position: relative;
+    left: -40px;
+    top: 40px;
+  }
+
+  #outlook-mexico {
+    position: relative;
+    top: -220px;
+  }
+
+  .tourism-session {
+    grid-row-start: 2;
+  }
+
+  .mdt-students {
+    position: relative;
+    top: 240px;
+    left: -40px;
+  }
+
+  /* --- COLOPHON --- */
+  #back-to-top > a > img {
+    width: 80px;
+  }
 }
 /*-----------------------------------------------------------
 --------- LAPTOP Up // 1201px and more-----------------------
@@ -4336,5 +4937,17 @@ sCREEN RESOLUTIONS
 
   .burger-navigation-mobile.active {
     display: none;
+  }
+
+  /*----- IMPACT MEXICO PROF PILOT  ------*/
+
+  .tolc-group > img {
+    width: 580px;
+  }
+
+  /* --- COVER ADJUSTMENTS --- */
+
+  .cover-container {
+    top: -60px;
   }
 }
