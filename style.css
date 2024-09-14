@@ -14,6 +14,7 @@
 
 body {
   background: linear-gradient(to left top, #f0efef, #e7e7e7);
+  background: -moz-linear-gradient(to left top, #f0efef, #e7e7e7);
   background-attachment: fixed;
   color: #484848;
   font-family: "Fira Sans", sans-serif;
@@ -221,6 +222,31 @@ nav.menu-bar-nav ul li ul li {
 }
 
 /*-------------------------------------------------
+----------------- NAVIGATION ASIDE ------------------
+--------------------------------------------------*/
+
+aside#current-section-box {
+  position: fixed;
+  top: 100px;
+  left: 150px;
+
+  color: #f7f7f8;
+
+  /* border-radius: 5px; */
+  font-size: 16px;
+  z-index: 1001;
+  display: none; /* Initially hidden */
+  text-transform: capitalize;
+  display: inline;
+}
+
+/* Styling each class name inside the aside box as a separate line */
+#current-section-box div {
+  margin-bottom: 5px; /*Add spacing between each class name*/
+  background-color: #cc242a;
+  padding: 10px;
+}
+/*-------------------------------------------------
 ---------------------------------------------------
 ----------------- DISPLAY CLASSES ------------------
 ---------------------------------------------------
@@ -320,6 +346,7 @@ nav.menu-bar-nav ul li ul li {
   /* background-color: #00a0d6;
   height: 400px; */
   margin: 0 auto;
+  /* position: relative; */
 }
 
 /*----- COVER HEADER CLASSES -------------*/
@@ -2712,20 +2739,27 @@ h3#summer-school-title {
 }
 
 #back-to-top > a > img {
-  width: 120px;
+  width: 80px;
 }
 
 /* --- //////////// TARGETING MOZILLA FIREFOX //// -----*/
 
 @-moz-document url-prefix() {
+  .onno-text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-right: 0;
+  }
+
   .onno-text-box > p {
-    width: 60%;
+    width: 90%;
   }
 
   div.onno-container > img {
-    max-width: 380px;
-    align-self: flex-start;
-    flex-basis: fit-content;
+    width: 340px;
+    /* align-self: flex-start; */
+    /* flex-basis: fit-content; */
   }
 }
 
@@ -3965,7 +3999,22 @@ sCREEN RESOLUTIONS
   }
 
   #back-to-top > a > img {
-    width: 80px;
+    width: 60px;
+  }
+
+  /* --- ASIDE BOX --- */
+
+  aside#current-section-box {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    color: #f7f7f8;
+    /* border-radius: 5px; */
+    font-size: 16px;
+    z-index: 1001;
+    display: none;
+    text-transform: capitalize;
+    display: inline;
   }
 }
 /*-----------------------------------------------------------

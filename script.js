@@ -122,3 +122,49 @@ function zoomImage(imageId) {
 function closePopup(popup) {
   document.body.removeChild(popup);
 }
+
+// script.js ASIDE BOX
+document.addEventListener("scroll", function () {
+  const sections = document.querySelectorAll(".section-id");
+  const asideBox = document.getElementById("current-section-box");
+  let currentSectionNames = [];
+  let isInSection = false;
+  const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+
+    if (
+      scrollPosition >= sectionTop &&
+      scrollPosition < sectionTop + sectionHeight
+    ) {
+      const sectionClasses = Array.from(section.classList).filter(
+        (className) => className !== "section"
+      );
+      if (sectionClasses.length > 1) {
+        currentSectionNames = sectionClasses.slice(-2);
+      } else {
+        currentSectionNames = sectionClasses;
+      }
+      isInSection = true;
+    }
+  });
+
+  const capitalizeFirstLetter = (str) => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  };
+
+  if (isInSection && currentSectionNames.length > 0) {
+    asideBox.style.display = "block";
+    asideBox.innerHTML = "";
+    currentSectionNames.forEach((name) => {
+      const capitalizedName = capitalizeFirstLetter(name);
+      const classItem = document.createElement("div");
+      classItem.textContent = capitalizedName;
+      asideBox.appendChild(classItem);
+    });
+  } else {
+    asideBox.style.display = "none";
+  }
+});
