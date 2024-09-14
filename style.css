@@ -2715,6 +2715,20 @@ h3#summer-school-title {
   width: 120px;
 }
 
+/* --- //////////// TARGETING MOZILLA FIREFOX //// -----*/
+
+@-moz-document url-prefix() {
+  .onno-text-box > p {
+    width: 60%;
+  }
+
+  div.onno-container > img {
+    max-width: 380px;
+    align-self: flex-start;
+    flex-basis: fit-content;
+  }
+}
+
 /*-------------------------------------------------
 ---------------------------------------------------
 ----------------- MEDIA QUERIES ------------------
