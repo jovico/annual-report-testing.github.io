@@ -235,7 +235,7 @@ aside#current-section-box {
   border-radius: 5px;
   font-size: 16px;
   z-index: 1001;
-  display: none; /*Initially hidden */
+  /* display: none; Initially hidden */
   /* text-transform: capitalize; */
 }
 
@@ -253,6 +253,10 @@ aside#current-section-box {
 
 .highlight {
   background-color: #681215 !important; /* Set your desired background color */
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
 
 .section-id {
