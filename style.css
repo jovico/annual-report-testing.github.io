@@ -4041,7 +4041,7 @@ sCREEN RESOLUTIONS
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; /* Ensure it wraps if the names exceed the width */
-    gap: 15px; /* Adds some space between the names */
+    gap: 5px; /* Adds some space between the names */
     /* text-transform: capitalize; */
     /* display: inline; */
     backdrop-filter: blur(20px);
