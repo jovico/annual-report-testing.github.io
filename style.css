@@ -259,6 +259,10 @@ aside#current-section-box {
   text-transform: capitalize;
 }
 
+.mobile-only-aside {
+  display: none !important;
+}
+
 .section-id {
   width: 100%;
   margin: 0;
@@ -4051,6 +4055,10 @@ sCREEN RESOLUTIONS
 
   .highlight {
     background-color: #681215;
+  }
+
+  .mobile-only-aside {
+    display: block !important;
   }
 }
 /*-----------------------------------------------------------

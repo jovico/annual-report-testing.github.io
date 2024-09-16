@@ -125,20 +125,27 @@ function closePopup(popup) {
 
 //
 // Aside box
-const capitalizeWords = (text) => {
-  return text
-    .split(" ")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
+const capitalizeFirstWord = (text) => {
+  if (!text) return "";
+  return text.charAt(0).toUpperCase() + text.slice(1);
 };
 
 const replaceHyphens = (text) => {
   return text.replace(/-/g, '<span class="hide-hyphen">-</span>');
 };
 
+const formatName = (name) => {
+  if (name === "24-outlook") {
+    return "24 Outlook"; // Special case for '24-outlook'
+  } else {
+    return capitalizeFirstWord(name.replace(/-/g, " "));
+  }
+};
+
 const updateAsideBox = () => {
   const sections = document.querySelectorAll(".section-id");
   const asideBox = document.getElementById("current-section-box");
+  asideBox.innerHTML = ""; // Clear the box before adding new content
   let currentSectionNames = [];
   let isInSection = false;
   const scrollPosition = window.scrollY + window.innerHeight / 2;
@@ -154,39 +161,31 @@ const updateAsideBox = () => {
       const sectionClasses = Array.from(section.classList).filter(
         (className) => className !== "section-id"
       );
-      currentSectionNames = sectionClasses.slice(-2); // Last two classes
+      currentSectionNames = sectionClasses.slice(-2); // Get last two classes
       isInSection = true;
     }
   });
 
-  asideBox.innerHTML = ""; // Clear previous content
-
-  if (isInSection) {
-    asideBox.style.display = "block"; // Show aside box
-
+  if (isInSection && currentSectionNames.length > 0) {
     currentSectionNames.forEach((name, index) => {
-      let formattedName = capitalizeWords(name);
-      formattedName = replaceHyphens(formattedName);
-
       const classItem = document.createElement("div");
-      classItem.innerHTML = formattedName; // Use innerHTML to apply styles
 
-      // Highlight the second div when there are exactly two classes
-      if (currentSectionNames.length === 2 && index === 1) {
-        classItem.classList.add("highlight");
-      } else if (currentSectionNames.length === 1) {
-        classItem.classList.add("capitalize");
+      // Special treatment for the '24-outlook' section
+      if (name === "24-outlook") {
+        classItem.classList.add("mobile-only-aside");
+        classItem.innerHTML = formatName(name);
+      } else {
+        const formattedName = formatName(name);
+        classItem.innerHTML = replaceHyphens(formattedName);
+
+        // Apply highlight to the second name or the last name
+        if (index === currentSectionNames.length - 1) {
+          classItem.classList.add("highlight");
+        }
       }
 
       asideBox.appendChild(classItem);
     });
-
-    // Handle single div case
-    if (currentSectionNames.length === 1) {
-      asideBox.firstChild.classList.add("capitalize");
-    }
-  } else {
-    asideBox.style.display = "none"; // Hide aside box if no sections
   }
 };
 
