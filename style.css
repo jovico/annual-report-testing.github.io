@@ -227,24 +227,38 @@ nav.menu-bar-nav ul li ul li {
 
 aside#current-section-box {
   position: fixed;
-  top: 100px;
-  left: 150px;
+  top: 110px;
+  left: 40px;
 
   color: #f7f7f8;
 
-  /* border-radius: 5px; */
+  border-radius: 5px;
   font-size: 16px;
   z-index: 1001;
-  display: none; /* Initially hidden */
-  text-transform: capitalize;
-  display: inline;
+  display: none; /*Initially hidden */
+  /* text-transform: capitalize; */
 }
 
-/* Styling each class name inside the aside box as a separate line */
+/*Styling each class name inside the aside box as a separate line*/
 #current-section-box div {
   margin-bottom: 5px; /*Add spacing between each class name*/
   background-color: #cc242a;
   padding: 10px;
+  display: block;
+}
+
+.hide-hyphen {
+  color: transparent; /* Or set it to the background color */
+}
+
+.highlight {
+  background-color: #681215 !important; /* Set your desired background color */
+}
+
+.section-id {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 /*-------------------------------------------------
 ---------------------------------------------------
@@ -867,6 +881,10 @@ aside#current-section-box {
   position: relative;
   z-index: 1;
   margin: 0 auto;
+}
+
+#celeste-blue-bar {
+  top: -200px;
 }
 
 #intro-nica-bar {
@@ -2130,7 +2148,7 @@ p.review-text {
 }
 
 #day-with-paulina {
-  margin-top: 80px;
+  margin-top: 0;
   z-index: 5;
 }
 
@@ -2481,7 +2499,7 @@ h3#exam-prep-title {
 }
 
 h3#summer-school-title {
-  grid-column-start: ;
+  /* grid-column-start: ; */
 }
 
 .pack-purpose-bar {
@@ -3389,15 +3407,9 @@ sCREEN RESOLUTIONS
     margin-top: 40px;
   }
 
-  /* .graphic-bar-mexico {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-
-    align-items: flex-end;
-    margin-top: 40px;
-    /* margin-left: 10%; 
-  } */
+  .graphic-bar-mexico {
+    margin-left: 40px;
+  }
 
   h3.graphic-hosp-title {
     font-size: 20px;
@@ -3535,6 +3547,10 @@ sCREEN RESOLUTIONS
     position: relative;
     top: 0;
     margin: 0 auto;
+  }
+
+  #celeste-blue-bar {
+    top: 0;
   }
 
   #a-day-with > div.border-color-bottom-yellow {
@@ -3976,6 +3992,7 @@ sCREEN RESOLUTIONS
   /* --- COLOPHON --- */
 
   #colophon-inner-container {
+    max-width: 100%;
     padding: 20px;
   }
 
@@ -3993,9 +4010,10 @@ sCREEN RESOLUTIONS
   }
 
   #back-to-top {
-    position: relative;
+    position: absolute;
     bottom: 0;
-    right: -220px;
+    right: 0;
+    left: 280px;
   }
 
   #back-to-top > a > img {
@@ -4010,11 +4028,25 @@ sCREEN RESOLUTIONS
     left: 0;
     color: #f7f7f8;
     /* border-radius: 5px; */
-    font-size: 16px;
+    font-size: 14px;
     z-index: 1001;
-    display: none;
-    text-transform: capitalize;
-    display: inline;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Ensure it wraps if the names exceed the width */
+    gap: 15px; /* Adds some space between the names */
+    /* text-transform: capitalize; */
+    /* display: inline; */
+    backdrop-filter: blur(20px);
+    backdrop-filter: opacity(50%);
+  }
+
+  aside#current-section-box div {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .highlight {
+    background-color: #681215;
   }
 }
 /*-----------------------------------------------------------

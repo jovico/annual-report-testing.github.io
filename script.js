@@ -123,48 +123,79 @@ function closePopup(popup) {
   document.body.removeChild(popup);
 }
 
-// script.js ASIDE BOX
-document.addEventListener("scroll", function () {
+//
+// Aside box
+const capitalizeEveryWord = (text) => {
+  return text.replace(/\b\w/g, (char) => char.toUpperCase());
+};
+
+const replaceHyphens = (text) => {
+  return text.replace(/-/g, '<span class="hide-hyphen">-</span>');
+};
+
+const updateAsideBox = () => {
   const sections = document.querySelectorAll(".section-id");
   const asideBox = document.getElementById("current-section-box");
   let currentSectionNames = [];
   let isInSection = false;
   const scrollPosition = window.scrollY + window.innerHeight / 2;
 
+  console.log("Scroll Position:", scrollPosition);
+
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
+
+    console.log(`Section Top: ${sectionTop}, Section Height: ${sectionHeight}`);
 
     if (
       scrollPosition >= sectionTop &&
       scrollPosition < sectionTop + sectionHeight
     ) {
       const sectionClasses = Array.from(section.classList).filter(
-        (className) => className !== "section"
+        (className) => className !== "section-id"
       );
-      if (sectionClasses.length > 1) {
-        currentSectionNames = sectionClasses.slice(-2);
-      } else {
-        currentSectionNames = sectionClasses;
-      }
+      currentSectionNames = sectionClasses.slice(-2); // Last two classes
       isInSection = true;
     }
   });
 
-  const capitalizeFirstLetter = (str) => {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  };
+  console.log("Current Section Names:", currentSectionNames);
 
   if (isInSection && currentSectionNames.length > 0) {
     asideBox.style.display = "block";
-    asideBox.innerHTML = "";
-    currentSectionNames.forEach((name) => {
-      const capitalizedName = capitalizeFirstLetter(name);
+    asideBox.innerHTML = ""; // Clear previous content
+
+    currentSectionNames.forEach((name, index) => {
+      const styledName = replaceHyphens(capitalizeEveryWord(name));
       const classItem = document.createElement("div");
-      classItem.textContent = capitalizedName;
+      classItem.innerHTML = styledName; // Use innerHTML to apply styles
+
+      // Highlight only if there are more than one class
+      if (
+        currentSectionNames.length > 1 &&
+        index === currentSectionNames.length - 2
+      ) {
+        classItem.classList.add("highlight");
+      }
+
       asideBox.appendChild(classItem);
     });
+
+    // Special handling for the case with only one section
+    if (currentSectionNames.length === 1) {
+      const singleName = replaceHyphens(
+        capitalizeEveryWord(currentSectionNames[0])
+      );
+      asideBox.innerHTML = `<div class="capitalize-words">${singleName}</div>`;
+    }
   } else {
     asideBox.style.display = "none";
   }
-});
+};
+
+document.addEventListener("scroll", updateAsideBox);
+window.addEventListener("resize", updateAsideBox); // Optional: update on resize
+
+// Initial call to set aside box content if already in a section
+updateAsideBox();
