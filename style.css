@@ -571,6 +571,7 @@ aside#current-section-box {
   grid-column-start: 4;
   grid-column-end: 6;
   display: flex;
+  align-items: flex-start;
 }
 
 .aside-img-container-univ-nica {
@@ -814,6 +815,10 @@ aside#current-section-box {
 .position-right {
   grid-column-start: -1;
   margin-left: 20px;
+}
+
+#financials-nica {
+  margin-top: -120px;
 }
 
 /*-- ---------- [ END ]GRID CONTAINER FINANCIALS --*/
@@ -1257,6 +1262,10 @@ p.featured-text {
   display: none;
 }
 
+#student-stories-mex-title {
+  margin-top: 120px;
+}
+
 /*------------- // STUDENT GABRIELA  //-------------------*/
 
 .student-stories-container-gabriela {
@@ -1652,6 +1661,10 @@ div.education-costs-second-column > div:last-child {
 
 .edu-in-numbers-hr-white {
   visibility: hidden;
+}
+
+#edu-numbers-mex {
+  margin-top: 120px;
 }
 
 /*---------- // PROFITS TO EDU NICA // -------*/
@@ -2122,6 +2135,11 @@ p.review-text {
   margin-top: 0;
 }
 
+/* --- YEAR IN BRIEF --- */
+#year-in-brief {
+  margin-top: 220px;
+}
+
 /*------------- // A DAY WITH... //-------------------*/
 
 .container-a-day-with {
@@ -2182,6 +2200,10 @@ p.review-text {
 
 #celeste-intro {
   width: 380px;
+}
+
+#border-paulina {
+  top: -200px;
 }
 
 /* -- //////////// OUTLOOK 2024 ////// -- */
@@ -2454,6 +2476,11 @@ div.index-mobile > img {
   grid-column-start: 5;
 }
 
+#youth-problems-mex {
+  grid-column-start: 5;
+  padding-left: 40px;
+}
+
 .img-container-mex-impact > img {
   width: 350px;
   height: min-content;
@@ -2600,6 +2627,14 @@ h3#summer-school-title {
 .wrapper-theory-change > img {
   width: 100%;
   cursor: pointer;
+}
+
+#theory-change-mex {
+  margin-top: 120px;
+}
+
+#theory-of-change {
+  margin-top: -40px;
 }
 
 /* --- //// THE THEORY OF CHANGE POPUP WINDOW //// --- */
@@ -4195,7 +4230,7 @@ sCREEN RESOLUTIONS
   }
 
   .paragraph-xxl > p {
-    width: 480px;
+    width: 420px;
   }
 
   .paragraph-xxl-xl > p {
@@ -4342,7 +4377,7 @@ sCREEN RESOLUTIONS
   }
 
   .gabriela-text {
-    grid-column: span 6;
+    grid-column: span 7;
   }
 
   /* ----- YEAR IN BRIEF -----*/
@@ -4850,6 +4885,13 @@ sCREEN RESOLUTIONS
     width: 550px;
   }
 
+  #youth-problems-mex {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 7;
+  }
+
   .paragraph-ipad-mini > p {
     width: 480px;
   }
@@ -4899,8 +4941,21 @@ sCREEN RESOLUTIONS
     top: -220px;
   }
 
+  .aside-img-container-outlook02 {
+    grid-row-start: 22;
+    margin-left: 40px;
+  }
+
+  #outlook-mex-text {
+    grid-row-start: 4;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
   .tourism-session {
     grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 6;
   }
 
   .mdt-students {
