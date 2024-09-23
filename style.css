@@ -4780,7 +4780,7 @@ sCREEN RESOLUTIONS
   .aside-img-column-01 > img {
     flex-grow: 0;
     flex-shrink: 0;
-    height: auto;
+    flex-basis: auto;
   }
 
   .aside-img-column-02 {
