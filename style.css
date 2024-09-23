@@ -37,12 +37,12 @@ ul {
   padding: 0;
 }
 
-img {
-  width: 100%;
+/* img {
+  max-width: 100%;
   height: auto;
-  object-fit: contain; /* or 'cover' if you want it to fill the container */
+  object-fit: contain; /* or 'cover' if you want it to fill the container 
   flex-shrink: 0;
-}
+} */
 
 h1,
 h2,
@@ -559,6 +559,7 @@ aside#current-section-box {
   grid-column-start: 4;
   grid-column-end: 6;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
 }
 
