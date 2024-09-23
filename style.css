@@ -555,6 +555,10 @@ aside#current-section-box {
   align-items: flex-start;
 }
 
+.aside-image-container img {
+  height: auto;
+}
+
 .aside-img-container-highschool-nica {
   grid-column-start: 4;
   grid-column-end: 6;
