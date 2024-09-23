@@ -4771,7 +4771,7 @@ sCREEN RESOLUTIONS
   .aside-img-column-01,
   .aside-img-column-02 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: fit-content;
   }
 
