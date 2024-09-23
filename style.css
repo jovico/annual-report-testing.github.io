@@ -4448,6 +4448,7 @@ sCREEN RESOLUTIONS
   .aside-img-column-01,
   .aside-img-column-02 {
     display: flex;
+    flex-direction: row;
     height: fit-content;
   }
 
@@ -4459,7 +4460,7 @@ sCREEN RESOLUTIONS
     grid-column-start: 1;
     grid-column-end: 6;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: row;
     margin-left: -20px;
   }
 
@@ -4771,7 +4772,7 @@ sCREEN RESOLUTIONS
   .aside-img-column-01,
   .aside-img-column-02 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: fit-content;
   }
 
