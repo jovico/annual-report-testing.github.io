@@ -571,7 +571,7 @@ aside#current-section-box {
   grid-column-start: 4;
   grid-column-end: 6;
   display: flex;
-  align-items: flex-start;
+  /* align-items: flex-start; */
 }
 
 .aside-img-container-univ-nica {
@@ -2841,13 +2841,6 @@ h3#summer-school-title {
   }
 }
 /* --- //////////// TARGETING SAFARI //// -----*/
-
-@supports (hanging-punctuation: first) and (font: -apple-system-body) and
-  (-webkit-appearance: none) {
-  .safari-only {
-    background-color: red;
-  }
-}
 
 /*-------------------------------------------------
 ---------------------------------------------------
