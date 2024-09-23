@@ -571,7 +571,7 @@ aside#current-section-box {
   grid-column-start: 4;
   grid-column-end: 6;
   display: flex;
-  /* align-items: flex-start; */
+  align-items: flex-start;
 }
 
 .aside-img-container-univ-nica {
