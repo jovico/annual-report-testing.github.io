@@ -4795,7 +4795,7 @@ sCREEN RESOLUTIONS
   }
 
   .aside-img-container-mex-logo > img {
-    width: 220px;
+    /* width: 220px; */
     height: min-content;
     flex-grow: 0;
     flex-shrink: 0;
