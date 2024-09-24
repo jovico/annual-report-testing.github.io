@@ -197,24 +197,32 @@ updateAsideBox();
 
 // click outside closes dropdown box
 
-// Toggle the dropdown menu when clicked
-document.addEventListener("click", function (event) {
+// Function to close dropdown when clicking outside
+document.addEventListener("DOMContentLoaded", () => {
   const dropdown = document.querySelector(".dropdown-menu");
-  const button = document.querySelector(".dropdown-toggle");
+  const toggleButton = document.querySelector(".dropdown-toggle");
 
-  // Check if the clicked element is inside the dropdown or the button
-  const isClickInside =
-    dropdown.contains(event.target) || button.contains(event.target);
+  // Function to toggle the dropdown menu
+  const toggleDropdown = (event) => {
+    event.stopPropagation();
+    dropdown.classList.toggle("show");
+  };
 
-  if (!isClickInside) {
-    // If clicked outside, close the dropdown
-    dropdown.classList.remove("show");
-  }
+  // Function to close the dropdown when clicking outside
+  const closeDropdown = (event) => {
+    if (
+      !dropdown.contains(event.target) &&
+      !toggleButton.contains(event.target)
+    ) {
+      dropdown.classList.remove("show");
+    }
+  };
+
+  // Event listener for both click and touchstart to toggle dropdown
+  toggleButton.addEventListener("click", toggleDropdown);
+  toggleButton.addEventListener("touchstart", toggleDropdown);
+
+  // Event listener to close dropdown when clicking outside
+  document.addEventListener("click", closeDropdown);
+  document.addEventListener("touchstart", closeDropdown);
 });
-
-// This part handles the click to open the dropdown
-document
-  .querySelector(".dropdown-toggle")
-  .addEventListener("click", function () {
-    document.querySelector(".dropdown-menu").classList.toggle("show");
-  });
