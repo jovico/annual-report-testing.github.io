@@ -4480,9 +4480,9 @@ sCREEN RESOLUTIONS
 
   .aside-img-container > img {
     width: 80%;
-    min-height: 0;
-    max-height: 100%;
-    height: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
   }
 
   #workshops-text {
