@@ -2512,10 +2512,12 @@ div.index-mobile > img {
 }
 
 .aside-image-container-mio02 {
-  display: grid;
   grid-column-start: 1;
   /* grid-column-end: 5; */
   grid-row-start: 7;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 div.aside-image-container-mio > img {
@@ -4838,7 +4840,7 @@ sCREEN RESOLUTIONS
   /*--- MIO ---*/
 
   .aside-image-container-mio02 {
-    display: grid;
+    /* display: grid; */
     grid-column-start: 1;
     /* grid-column-end: 5; */
     grid-row-start: 8;
@@ -4846,6 +4848,9 @@ sCREEN RESOLUTIONS
 
   div.aside-image-container-mio02 > img {
     width: 280px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
   }
 
   div.aside-image-container-mio > img {
