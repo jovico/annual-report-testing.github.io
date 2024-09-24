@@ -8,7 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   /* scroll-padding-top: 180px; */
 }
 
@@ -783,7 +783,7 @@ aside#current-section-box {
 
 .aside-img-container-mex-logo > img {
   width: 280px;
-  height: min-content;
+  /* height: min-content; */
   margin-bottom: 20px;
 }
 
@@ -4803,7 +4803,7 @@ sCREEN RESOLUTIONS
 
   .aside-img-container-mex-logo > img {
     /* width: 220px; */
-    height: min-content;
+    /* height: min-content; */
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
