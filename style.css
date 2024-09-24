@@ -4856,6 +4856,9 @@ sCREEN RESOLUTIONS
     width: 295px;
     height: auto;
     margin-top: -10px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
   }
 
   #mio-logo-box {
