@@ -4850,7 +4850,10 @@ sCREEN RESOLUTIONS
 
   div.aside-image-container-mio > img {
     width: 320px;
-    height: min-content;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    /* height: min-content; */
   }
 
   .aside-image-container-mio {
