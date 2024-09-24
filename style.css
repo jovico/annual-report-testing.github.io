@@ -2529,7 +2529,9 @@ div.aside-image-container-mio > img {
 
 div.aside-image-container-mio02 > img {
   width: 320px;
-  height: min-content;
+  min-height: 0;
+  max-height: 100%;
+  height: auto;
 }
 
 .tolc-group > img {
