@@ -305,6 +305,17 @@ nav.menu-bar-nav ul li ul li {
   width: 100%;
 }
 
+/* --- DROPDOWN OUT WHEN CLICK OUTSIDE OF IT --- */
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
 /*-------------------------------------------------
 ----------------- NAVIGATION ASIDE ------------------
 --------------------------------------------------*/

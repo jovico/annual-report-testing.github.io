@@ -194,3 +194,25 @@ window.addEventListener("resize", updateAsideBox); // Optional: update on resize
 
 // Initial call to set aside box content if already in a section
 updateAsideBox();
+
+// click outside closes dropdown box
+
+// Toggle the dropdown menu when clicked
+document
+  .querySelector(".dropdown-toggle")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+    dropdownMenu.classList.toggle("show");
+  });
+
+// Close the dropdown if clicking outside of it
+document.addEventListener("click", function (e) {
+  const isDropdown =
+    e.target.matches(".dropdown-toggle") || e.target.closest(".dropdown-menu");
+  const dropdownMenu = document.querySelector(".dropdown-menu");
+
+  if (!isDropdown && dropdownMenu.classList.contains("show")) {
+    dropdownMenu.classList.remove("show");
+  }
+});
