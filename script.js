@@ -197,7 +197,11 @@ updateAsideBox();
 
 // click outside closes dropdown box
 
-// Function to close dropdown when clicking outside
+// Function to detect Safari browser
+function isSafari() {
+  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const dropdown = document.querySelector(".dropdown-menu");
   const toggleButton = document.querySelector(".dropdown-toggle");
@@ -218,11 +222,71 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Event listener for both click and touchstart to toggle dropdown
-  toggleButton.addEventListener("click", toggleDropdown);
-  toggleButton.addEventListener("touchstart", toggleDropdown);
+  // Apply Safari-specific behavior only if on Safari
+  if (isSafari()) {
+    toggleButton.addEventListener("click", toggleDropdown);
+    toggleButton.addEventListener("touchstart", toggleDropdown);
+    document.addEventListener("click", closeDropdown);
+    document.addEventListener("touchstart", closeDropdown);
+  } else {
+    // Non-Safari code (e.g., regular dropdown behavior for Chrome)
+    toggleButton.addEventListener("click", () => {
+      dropdown.classList.toggle("show");
+    });
+    document.addEventListener("click", (event) => {
+      if (
+        !dropdown.contains(event.target) &&
+        !toggleButton.contains(event.target)
+      ) {
+        dropdown.classList.remove("show");
+      }
+    });
+  }
+});
 
-  // Event listener to close dropdown when clicking outside
-  document.addEventListener("click", closeDropdown);
-  document.addEventListener("touchstart", closeDropdown);
+// Function to detect Chrome browser
+function isChrome() {
+  return (
+    /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor)
+  );
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdown = document.querySelector(".dropdown-menu");
+  const toggleButton = document.querySelector(".dropdown-toggle");
+
+  // Function to toggle the dropdown menu
+  const toggleDropdown = (event) => {
+    event.stopPropagation();
+    dropdown.classList.toggle("show");
+  };
+
+  // Function to close the dropdown when clicking outside
+  const closeDropdown = (event) => {
+    if (
+      !dropdown.contains(event.target) &&
+      !toggleButton.contains(event.target)
+    ) {
+      dropdown.classList.remove("show");
+    }
+  };
+
+  // Apply Chrome-specific behavior with a fix for the display issue
+  if (isChrome()) {
+    toggleButton.addEventListener("click", (event) => {
+      event.stopPropagation();
+      dropdown.classList.toggle("show");
+
+      // Force a repaint to fix display issue in Chrome
+      dropdown.style.display = "none";
+      dropdown.offsetHeight; // Trigger reflow
+      dropdown.style.display = ""; // Reset display style to block
+    });
+
+    document.addEventListener("click", closeDropdown);
+  } else {
+    // Regular behavior for other browsers
+    toggleButton.addEventListener("click", toggleDropdown);
+    document.addEventListener("click", closeDropdown);
+  }
 });
