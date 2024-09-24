@@ -2505,6 +2505,9 @@ div.index-mobile > img {
 .aside-image-container-mio {
   grid-column-start: 4;
   grid-column-end: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .aside-image-container-mio02 {
@@ -2516,7 +2519,9 @@ div.index-mobile > img {
 
 div.aside-image-container-mio > img {
   width: 420px;
-  height: min-content;
+  min-height: 0;
+  max-height: 100%;
+  height: auto;
 }
 
 div.aside-image-container-mio02 > img {
