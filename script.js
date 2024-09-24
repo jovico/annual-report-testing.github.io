@@ -202,17 +202,20 @@ document
   .querySelector(".dropdown-toggle")
   .addEventListener("click", function (e) {
     e.preventDefault();
+    e.stopPropagation(); // Prevent this click from being caught by document listener
     const dropdownMenu = document.querySelector(".dropdown-menu");
     dropdownMenu.classList.toggle("show");
   });
 
 // Close the dropdown if clicking outside of it
 document.addEventListener("click", function (e) {
-  const isDropdown =
-    e.target.matches(".dropdown-toggle") || e.target.closest(".dropdown-menu");
   const dropdownMenu = document.querySelector(".dropdown-menu");
 
-  if (!isDropdown && dropdownMenu.classList.contains("show")) {
+  // If the click is not inside the dropdown, close it
+  if (
+    !e.target.closest(".dropdown") &&
+    dropdownMenu.classList.contains("show")
+  ) {
     dropdownMenu.classList.remove("show");
   }
 });
