@@ -2495,8 +2495,10 @@ div.index-mobile > img {
 }
 
 .mio-logo > img {
-  height: 150px;
-  width: min-content;
+  width: 295px;
+  min-height: 0;
+  max-height: 100%;
+  height: auto;
   margin-top: -10px;
 }
 
@@ -4851,8 +4853,8 @@ sCREEN RESOLUTIONS
   }
 
   .mio-logo > img {
-    height: 120px;
-    width: min-content;
+    width: 295px;
+    height: auto;
     margin-top: -10px;
   }
 
