@@ -2485,10 +2485,13 @@ div.index-mobile > img {
 
 .img-container-mex-impact > img {
   width: 350px;
-  height: min-content;
+  /* height: min-content; */
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
+  min-height: 0;
+  max-height: 100%;
+  height: auto;
 }
 
 .mio-logo > img {
