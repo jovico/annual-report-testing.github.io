@@ -4516,6 +4516,16 @@ sCREEN RESOLUTIONS
     margin-top: 60px;
   }
 
+  #mio-logo-box {
+    grid-column-start: 2;
+    grid-row-start: 8;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 40px;
+  }
+
   /* --- OUTLOOK 2024 --- */
 
   .edit-mini-ipad {
