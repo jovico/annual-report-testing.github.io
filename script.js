@@ -198,24 +198,23 @@ updateAsideBox();
 // click outside closes dropdown box
 
 // Toggle the dropdown menu when clicked
-document
-  .querySelector(".dropdown-toggle")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    e.stopPropagation(); // Prevent this click from being caught by document listener
-    const dropdownMenu = document.querySelector(".dropdown-menu");
-    dropdownMenu.classList.toggle("show");
-  });
+document.addEventListener("click", function (event) {
+  const dropdown = document.querySelector(".dropdown-menu");
+  const button = document.querySelector(".dropdown-toggle");
 
-// Close the dropdown if clicking outside of it
-document.addEventListener("click", function (e) {
-  const dropdownMenu = document.querySelector(".dropdown-menu");
+  // Check if the clicked element is inside the dropdown or the button
+  const isClickInside =
+    dropdown.contains(event.target) || button.contains(event.target);
 
-  // If the click is not inside the dropdown, close it
-  if (
-    !e.target.closest(".dropdown") &&
-    dropdownMenu.classList.contains("show")
-  ) {
-    dropdownMenu.classList.remove("show");
+  if (!isClickInside) {
+    // If clicked outside, close the dropdown
+    dropdown.classList.remove("show");
   }
 });
+
+// This part handles the click to open the dropdown
+document
+  .querySelector(".dropdown-toggle")
+  .addEventListener("click", function () {
+    document.querySelector(".dropdown-menu").classList.toggle("show");
+  });
