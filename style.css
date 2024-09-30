@@ -668,22 +668,27 @@ aside#current-section-box {
   display: flex;
 }
 
-.aside-img-column-01 .aside-img-column-02 {
+.aside-img-column-01,
+.aside-img-column-02 {
   width: 150px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
 }
 
 .aside-img-column-01 > img,
 .aside-img-column-02 > img {
-  width: 150px;
+  width: 100%;
   margin-left: 10px;
   margin-top: 20px;
-  flex-basis: auto;
+  min-height: 0;
+  max-height: 100%;
+  height: auto;
 }
 
 .aside-img-column-02 {
-  display: flex;
-  flex-direction: column;
   margin-top: 80px;
+  margin-left: 20px;
 }
 
 .workshops-img > img,
@@ -3077,9 +3082,9 @@ sCREEN RESOLUTIONS
   }
 
   .aside-img-container {
-    display: grid;
+    /* display: grid;
     grid-column: span 5;
-    grid-row-start: 2;
+    grid-row-start: 2; */
   }
 
   .display-img {
@@ -3930,8 +3935,9 @@ sCREEN RESOLUTIONS
   .aside-img-column-01,
   .aside-img-column-02 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
+    fle
   }
 
   .aside-img-column-01 > img,
@@ -3940,8 +3946,8 @@ sCREEN RESOLUTIONS
     margin-left: 0;
     min-height: 0;
     max-height: 100%;
-    /* height: auto; */
-    height: min-content;
+     height: auto;
+    /* height: min-content; */
   }
 
   .aside-img-container-univ-nica {
@@ -4908,6 +4914,7 @@ sCREEN RESOLUTIONS
 
   .aside-img-column-02 {
     margin-top: 40px;
+    margin-left: 0;
   }
 
   .aside-img-container-highschool-nica {
