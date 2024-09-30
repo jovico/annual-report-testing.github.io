@@ -3937,7 +3937,7 @@ sCREEN RESOLUTIONS
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    fle
+    align-items: flex-start;
   }
 
   .aside-img-column-01 > img,
@@ -3946,7 +3946,7 @@ sCREEN RESOLUTIONS
     margin-left: 0;
     min-height: 0;
     max-height: 100%;
-     height: auto;
+    height: auto;
     /* height: min-content; */
   }
 
