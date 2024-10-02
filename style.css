@@ -4241,6 +4241,19 @@ sCREEN RESOLUTIONS
   .mobile-only-aside {
     display: block !important;
   }
+
+  #border-paulina {
+    top: 0;
+  }
+
+  #day-with-paulina {
+    margin-top: 80px;
+    z-index: 5;
+  }
+
+  #financials-nica {
+    margin-top: 0;
+  }
 }
 /*-----------------------------------------------------------
 --------- iPAD and TABLET // 481px X 1200px bar//------------
