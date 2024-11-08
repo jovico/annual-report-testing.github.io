@@ -490,6 +490,8 @@ aside#current-section-box {
   padding: 20px;
   background-color: #681215;
   text-align: center;
+  position: relative;
+  top: -80px;
 }
 
 .main-heading > h1 {
@@ -4178,6 +4180,8 @@ sCREEN RESOLUTIONS
     padding: 10px;
     background-color: #681215;
     text-align: center;
+    position: relative;
+    top: 0;
   }
 
   .main-heading > h1 {
