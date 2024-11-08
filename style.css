@@ -1272,6 +1272,13 @@ span.article-title-less {
   grid-column: span 6;
 }
 
+#gra-glance,
+#oax-glance {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  margin-bottom: 80px;
+}
+
 /*------------- // STUDENT STORIES //-------------------*/
 
 .flex-container-std-stories {
@@ -3141,7 +3148,7 @@ sCREEN RESOLUTIONS
   .text-box-span02 {
     grid-column-start: 1;
     grid-column: span 5;
-    grid-row-start: 1;
+    grid-row-start: 2;
     padding: 40px 20px;
   }
 
@@ -3169,6 +3176,14 @@ sCREEN RESOLUTIONS
     grid-column-end: 7;
     grid-row-start: 5;
     margin-bottom: 40px;
+  }
+
+  #gra-glance,
+  #oax-glance {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    margin: 20px auto;
   }
 
   .article-box-white {
