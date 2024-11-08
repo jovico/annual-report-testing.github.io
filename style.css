@@ -1483,6 +1483,11 @@ p.featured-text {
   display: none;
 }
 
+#year-brief-bar-blue,
+#year-brief-bar-yellow {
+  margin: 0;
+}
+
 /*---- EDUCATION IN NUMBERS ----*/
 
 .container-in-numbers {
