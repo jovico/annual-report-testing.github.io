@@ -329,7 +329,7 @@ aside#current-section-box {
 
   border-radius: 5px;
   font-size: 16px;
-  z-index: 1001;
+  z-index: 1000;
   /* display: none; Initially hidden */
   /* text-transform: capitalize; */
 }
@@ -2470,15 +2470,20 @@ div#outlook-nicaragua > div:nth-of-type(3) {
   width: 50%;
   font-weight: 350;
   position: relative;
-  top: -20px;
+  top: 0;
 }
 
 .intro-blue-box {
   background-color: #00a0d6e6;
   color: #f7f7f8;
   padding: 20px;
-  width: 40%;
+  width: 50%;
   font-weight: 350;
+  display: flex;
+}
+
+.intro-blue-box p {
+  align-items: center;
 }
 
 /* --- /////// TABLE OF CONTENTS ////// ---- */
@@ -4041,6 +4046,7 @@ sCREEN RESOLUTIONS
     padding-right: 100px;
     opacity: 0;
     transition: opacity 0.5s ease;
+    z-index: 10000;
   }
 
   .nav-links li,
