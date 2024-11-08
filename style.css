@@ -2304,17 +2304,17 @@ p.review-text {
 /* -- //////////// OUTLOOK 2024 ////// -- */
 
 .outlook-intro-text-box {
-  width: 460px;
+  width: 100%;
   padding: 40px;
 }
 
 .outlook-intro-text {
   font-size: 22px;
-  color: #f7f7f8;
+  color: #681215;
   font-weight: 300;
   font-style: italic;
   display: inline;
-  background: #3d0a0c99;
+  /* background: #3d0a0c99; */
   padding: 5px 0;
 }
 
@@ -2567,6 +2567,10 @@ div.index-mobile > img {
 }
 
 /* --- /////  MEXICO IMPACT MDT TOLC ETC //// --- */
+
+#impact-edu-mex {
+  margin-top: 180px;
+}
 
 .span-04 {
   grid-column: span 4;
