@@ -4065,14 +4065,14 @@ sCREEN RESOLUTIONS
     width: 100%;
     background-color: #681215f2;
     color: #f7f7f8;
-    position: absolute;
+    position: fixed;
     top: 40px;
     padding: 20px;
     padding-left: 40px;
     padding-right: 100px;
     opacity: 0;
     transition: opacity 0.5s ease;
-    z-index: 10000;
+    z-index: 10000 !important;
   }
 
   .nav-links li,
@@ -4252,7 +4252,7 @@ sCREEN RESOLUTIONS
     color: #f7f7f8;
     /* border-radius: 5px; */
     font-size: 14px;
-    z-index: 1001;
+    z-index: 100;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; /* Ensure it wraps if the names exceed the width */
