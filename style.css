@@ -2863,6 +2863,16 @@ h3#summer-school-title {
 }
 
 /* ---- LAST ONES BOTTOM CSS ----*/
+
+/* ---- SPACE ADJUSTMENTS ---- */
+#year-brief-title-mexico {
+  margin-top: 40px;
+}
+
+#a-day-with {
+  margin-top: 180px;
+}
+
 /* ---- OUTLOOK ---- */
 
 .outlook-mexico-paragraph {
