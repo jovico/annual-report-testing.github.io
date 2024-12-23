@@ -4073,6 +4073,7 @@ sCREEN RESOLUTIONS
     display: none;
     flex-direction: column;
     width: 100%;
+    height: 100vh;
     background-color: #681215f2;
     color: #f7f7f8;
     position: fixed;
@@ -4101,7 +4102,7 @@ sCREEN RESOLUTIONS
 
   .burgermenu-main-link {
     background-color: #cc242a;
-    padding: 5px 10px;
+    padding: 5px;
   }
 
   .nav-links li a,
@@ -4115,7 +4116,7 @@ sCREEN RESOLUTIONS
     text-decoration: underline;
     text-underline-offset: 8px;
     text-decoration-color: #cc242a;
-    line-height: 1.8rem;
+    line-height: 1.2rem;
   }
 
   .nav-links.active {
